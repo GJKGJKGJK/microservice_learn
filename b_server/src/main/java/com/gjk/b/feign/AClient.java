@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @description:
  */
 @FeignClient("service-a")
-@Component
+//@Component
 public interface AClient {
 
     /**

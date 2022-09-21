@@ -13,13 +13,10 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @description:
  */
 @SpringBootApplication
-@EnableFeignClients
+//@EnableFeignClients
 public class BApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(BApplication.class, args);
-        String userName = applicationContext.getEnvironment().getProperty("user.name");
-        String userAge = applicationContext.getEnvironment().getProperty("user.age");
-        System.out.println(userName + ":" + userAge);
+        SpringApplication.run(BApplication.class, args);
     }
 }
