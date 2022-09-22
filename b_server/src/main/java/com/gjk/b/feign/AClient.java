@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @date: 2022/9/20 9:24
  * @description:
  */
-@FeignClient("service-a")
-//@Component
+@FeignClient("server-a")
+@Component
 public interface AClient {
 
     /**

@@ -1,9 +1,13 @@
 package com.gjk.b.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.gjk.b.feign.AClient;
 
 /**
  * BController
@@ -17,11 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class BController {
 
 
-//    @Autowired
-//    private AClient aClient;
 
-
-    // 使用原生注解@Value()导入配置
     @Value("${user.id}")
     private String id;
     @Value("${user.name}")
@@ -31,7 +31,6 @@ public class BController {
 
     @GetMapping("/add")
     public String add(){
-//        aClient.add();
         System.out.println("调用/b/add接口");
         return "调用 /b/add ，requst param userId:{" + id + "}, userName:{" + name + "}, userAge:{" + age + "}";
     }

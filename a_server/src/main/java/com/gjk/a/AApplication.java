@@ -2,7 +2,6 @@ package com.gjk.a;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
@@ -12,7 +11,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @date: 2022/9/7 17:43
  * @description:
  */
-@EnableEurekaClient
 @EnableFeignClients
 @SpringBootApplication
 public class AApplication {

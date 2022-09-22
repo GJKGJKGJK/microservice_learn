@@ -13,7 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @description:
  */
 @SpringBootApplication
-//@EnableFeignClients
+@EnableFeignClients
 public class BApplication {
 
     public static void main(String[] args) {

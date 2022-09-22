@@ -5,16 +5,16 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * AClient
+ * BClient
  *
  * @author: gaojiankang
  * @date: 2022/9/20 10:51
  * @description:
  */
-@FeignClient("service-b")
+@FeignClient("server-b")
 @Component
-public interface AClient {
+public interface BClient {
 
-    @GetMapping("/add")
-    public String add();
+    @GetMapping("/b/add")
+     String add();
 }
