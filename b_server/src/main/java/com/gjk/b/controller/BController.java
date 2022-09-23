@@ -3,6 +3,7 @@ package com.gjk.b.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import com.gjk.b.feign.AClient;
  * @date: 2022/9/19 20:23
  * @description:
  */
+@RefreshScope
 @RestController
 @RequestMapping("/b")
 public class BController {
