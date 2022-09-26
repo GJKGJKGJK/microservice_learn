@@ -12,6 +12,7 @@
         <module>eureka_server</module>
         <module>a_server</module>
         <module>b_server</module>
+        <module>geteway_server</module>
     </modules>
 
     <properties>

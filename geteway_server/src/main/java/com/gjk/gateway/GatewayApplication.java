@@ -1,21 +1,21 @@
-package com.gjk.b;
+package com.gjk.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * BApplication
+ * GatewayApplication
  *
  * @author: gaojiankang
- * @date: 2022/9/19 19:38
+ * @date: 2022/9/26 11:23
  * @description:
  */
 @SpringBootApplication
-@EnableFeignClients
-public class BApplication {
+public class GatewayApplication {
+
+
 
     public static void main(String[] args) {
-        SpringApplication.run(BApplication.class, args);
+        SpringApplication.run(GatewayApplication.class, args);
     }
 }

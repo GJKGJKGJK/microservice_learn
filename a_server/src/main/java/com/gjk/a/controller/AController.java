@@ -18,7 +18,6 @@ import com.gjk.a.feign.BClient;
  */
 @RefreshScope
 @RestController
-@RequestMapping("/a")
 public class AController {
 
 
