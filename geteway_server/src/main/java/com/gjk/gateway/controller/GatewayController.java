@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * gatewauController
+ * GatewayController
  *
  * @author: gaojiankang
  * @date: 2022/9/26 19:40
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RefreshScope
-public class gatewauController {
+public class GatewayController {
 
     @Value("${user.name}")
     private String name;
