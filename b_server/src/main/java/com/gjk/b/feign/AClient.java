@@ -4,6 +4,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.gjk.b.feign.fallback.AClientFallBack;
+import com.gjk.b.feign.fallback.FeignConfiguration;
+
 /**
  * AClient
  *
@@ -11,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @date: 2022/9/20 9:24
  * @description:
  */
-@FeignClient("server-a")
+@FeignClient(value = "server-a", fallback = AClientFallBack.class, configuration = FeignConfiguration.class)
 @Component
 public interface AClient {
 

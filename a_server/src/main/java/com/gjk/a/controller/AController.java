@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gjk.a.feign.BClient;
+import com.gjk.a.service.AService;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * AController
@@ -18,11 +20,12 @@ import com.gjk.a.feign.BClient;
  */
 @RefreshScope
 @RestController
+@Slf4j
+@RequiredArgsConstructor(onConstructor_ = @Autowired)
 public class AController {
 
+    private final AService aService;
 
-    @Autowired
-    private BClient bClient;
 
     @Value("${user.id}")
     private String userId;
@@ -35,9 +38,9 @@ public class AController {
 
     @GetMapping("/add")
     public String add(){
-        System.out.println("调用/a/add接口");
-//        bClient.add();
-        return "调用 /a/add ，requst param userId:{" + userId + "}, userName:{" + userName + "}, userAge:{" + userAge + "}";
+        log.info("调用/a/add接口");
+        aService.hello();
+        return "userId:{" + userId + "}, userName:{" + userName + "}, userAge:{" + userAge + "}";
 
     }
 }
