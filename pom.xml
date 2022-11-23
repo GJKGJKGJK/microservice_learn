@@ -13,7 +13,6 @@
         <module>a_server</module>
         <module>b_server</module>
         <module>gateway_server</module>
-        <module>sentinel_server</module>
     </modules>
 
     <properties>
@@ -74,6 +73,13 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>4.6.3</version>
+        </dependency>
+
+
+        <!-- spring-boot actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
